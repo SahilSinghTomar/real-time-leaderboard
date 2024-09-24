@@ -175,3 +175,7 @@ This project is a real-time leaderboard system that allows users to submit their
   - **200**: Rank fetched successfully.
   - **404**: User or game not found.
   - **500**: Internal Server Error.
+
+## Roadmap Real time Dashboard Project
+
+### For more details, visit the [Project Description](https://roadmap.sh/projects/realtime-leaderboard-system)
