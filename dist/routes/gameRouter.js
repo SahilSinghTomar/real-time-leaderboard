@@ -64,7 +64,7 @@ router.post('/score/:id', (req, res) => __awaiter(void 0, void 0, void 0, functi
             },
         });
         const timestamp = Date.now();
-        yield redis_1.default.hset(`game:${id}:leaderboard`, user.username, `${score}:${timestamp}`);
+        yield redis_1.default.zadd(`game:${id}:leaderboard`, user.username, `${score}:${timestamp}`);
         yield redis_1.default.zadd(`overall:leaderboard`, score, user.username);
         res.status(201).json({
             success: 'Score added successfully',

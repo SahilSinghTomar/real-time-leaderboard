@@ -68,7 +68,7 @@ router.post('/score/:id', async (req: AuthenticatedRequest, res: Response) => {
 
     const timestamp = Date.now();
 
-    await redis.hset(
+    await redis.zadd(
       `game:${id}:leaderboard`,
       user.username,
       `${score}:${timestamp}`
