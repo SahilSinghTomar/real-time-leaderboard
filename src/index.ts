@@ -5,7 +5,6 @@ import leaderboardRouter from './routes/leaderboardRouter';
 import gameRouter from './routes/gameRouter';
 import authMiddleware from './routes/authMiddleware';
 import cookieParser from 'cookie-parser';
-import redis from './utils/redis';
 
 dotenv.config();
 
