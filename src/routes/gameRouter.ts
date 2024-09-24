@@ -70,8 +70,8 @@ router.post('/score/:id', async (req: AuthenticatedRequest, res: Response) => {
 
     await redis.zadd(
       `game:${id}:leaderboard`,
-      user.username,
-      `${score}:${timestamp}`
+      score,
+      `${user.username}:${timestamp}`
     );
 
     await redis.zadd(`overall:leaderboard`, score, user.username);

@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc --watch",
-    "start": "nodemon dist/index.js"
+    "start": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -27,6 +35,9 @@
   "devDependencies": {
     "@types/cookie-parser": "^1.4.7",
     "nodemon": "^3.1.7",
-    "prisma": "^5.19.1"
+    "pre-commit": "^1.2.2",
+    "prisma": "^5.19.1",
+    "rimraf": "^5.0.10",
+    "ts-node": "^10.9.2"
   }
 }
