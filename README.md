@@ -2,6 +2,8 @@
 
 This project is a real-time leaderboard system that allows users to submit their scores, view the leaderboard, and see their rank for different games. The system uses **Redis** to store and retrieve scores efficiently, ensuring real-time updates to the leaderboard.
 
+# Live hosted backend of this website [Link](https://real-time-leaderboard-o8na.vercel.app/)
+
 ## Tech Stack
 
 - **Node.js**: Backend runtime environment.
@@ -134,7 +136,7 @@ This project is a real-time leaderboard system that allows users to submit their
 
 #### Update user's score for a game
 
-- **URL**: `/api/v1/score/:gameId/update`
+- **URL**: `/api/v1/score/:gameId`
 - **Method**: `PUT`
 - **Params**:
   `gameId`: The ID of the game.
